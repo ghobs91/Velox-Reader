@@ -146,12 +146,12 @@ export default function SubscriptionPage() {
                 setImportingSubscriptions([...toImport]);
                 continue;
             }
-            
 
             // Update the list with the match from feedly
             // and let React know it's changed.
+            
+            addSubscription(bestMatch);
             toImport[i] = bestMatch;
-            addSubscription(toImport[i]);
             setImportingSubscriptions([...toImport]);
         }
     }, [setImportingSubscriptions,
