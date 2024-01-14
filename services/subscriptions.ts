@@ -56,3 +56,22 @@ export const toggleSubscription = async (subscriptionPromise: Subscription | Pro
         await updateStreams(subscription.id);
     }
 }
+
+export const addSubscription = async (subscriptionPromise: Subscription | Promise<Subscription>) => {
+    const subscription = await subscriptionPromise;
+
+    const id = subscription.id;
+    const existing = await getSubscription(id);
+    if (existing) {
+        return; 
+    } else {
+        // If we're adding a subscription, prompt the user
+        // to enable persistence.
+        maybePersist();
+
+        await saveSubscription(subscription);
+
+        // Fetch articles for the subscription.
+        await updateStreams(subscription.id);
+    }
+}

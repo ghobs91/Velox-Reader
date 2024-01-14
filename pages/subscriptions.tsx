@@ -13,8 +13,9 @@ import { guessFeedUrl, Subscription } from 'model/subscription';
 import * as React from 'react';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { getDb } from "services/db";
-import { toggleSubscription } from "services/subscriptions";
+import {toggleSubscription, addSubscription } from "services/subscriptions";
 import { useDebounced } from '@/hooks/useDebounced';
+import { saveSubscription } from '../services/db';
 
 const searchResultVariants = {
     initial: { opacity: 0, height: 0 },
@@ -132,6 +133,7 @@ export default function SubscriptionPage() {
             const similar = await searchFeeds(guessFeedUrl(importing))
                 .catch(() => []);
             const bestMatch = similar[0];
+            addSubscription(toImport[i]);
 
             // We couldn't find anything similar :'(
             if (!bestMatch) {
@@ -144,6 +146,7 @@ export default function SubscriptionPage() {
                 setImportingSubscriptions([...toImport]);
                 continue;
             }
+            
 
             // Update the list with the match from feedly
             // and let React know it's changed.
@@ -173,6 +176,10 @@ export default function SubscriptionPage() {
             <TextField label="Search term or feed url" className="w-full" value={search} onChange={e => setSearch(e.target.value)}/>
         </div>
 
+        {/* <div>
+            <Button key="follow-all" variant="outline" color="primary" onClick={bulkAddSubscriptions}>Follow All</Button>
+        </div> */}
+
         {isSearching && <Centre>
             <LoadingSpinner className="p-2" />
         </Centre>}
@@ -182,7 +189,7 @@ export default function SubscriptionPage() {
                 subscription={s}
                 isSubscribed={isSubscribed(s)}
                 isImporting={isImporting(s)}
-                toggleSubscription={toggleSubscription} />)}
+                toggleSubscription={toggleSubscription}/>)}
         </StackPanel>
         {!isSearching && storeOrSearchResults.length === 0 && <StackPanel>
             <span>
