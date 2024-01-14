@@ -133,7 +133,7 @@ export default function SubscriptionPage() {
             const similar = await searchFeeds(guessFeedUrl(importing))
                 .catch(() => []);
             const bestMatch = similar[0];
-            addSubscription(toImport[i]);
+            
 
             // We couldn't find anything similar :'(
             if (!bestMatch) {
@@ -151,6 +151,7 @@ export default function SubscriptionPage() {
             // Update the list with the match from feedly
             // and let React know it's changed.
             toImport[i] = bestMatch;
+            addSubscription(toImport[i]);
             setImportingSubscriptions([...toImport]);
         }
     }, [setImportingSubscriptions,
