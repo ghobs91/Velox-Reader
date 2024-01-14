@@ -15,3 +15,11 @@ article iframe {
 .entry-summary img {
     display: none;
 }
+
+.article-text-container {
+    overflow: hidden;
+    height: 190px;
+}
+.article-row-container{
+    height: 100%;
+}

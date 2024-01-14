@@ -27,13 +27,13 @@ const EntryCard = (props: { entry: Entry, showingUnreadOnly?: boolean }) => {
     const tintGray = !props.entry.unread && props.showingUnreadOnly;
 
     return <div className="bg-paper cursor-pointer relative rounded-lg overflow-hidden shadow entry-card">
-            <div className="flex flex-row">
-                <div className="flex-1 min-w-0 px-4 pt-2">
+            <div className="flex flex-row article-row-container">
+                <div className="flex-1 min-w-0 px-4 pt-2 article-text-container">
                     <div>
                         <h2 className="text-lg max-h-12 overflow-hidden leading-tight" style={maxLines}>{props.entry.title}</h2>
                         <h3 className="text-md text-gray-500 leading-tight">{subheader}</h3>
                     </div>
-                    <div className="mt-2 mb-2 text-sm overflow-none">
+                    <div className="mt-2 mb-2 text-sm">
                         <div className="entry-summary" dangerouslySetInnerHTML={summaryHtmlContent}></div>
                     </div>
                 </div>
