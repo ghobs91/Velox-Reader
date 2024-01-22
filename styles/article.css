@@ -16,10 +16,42 @@ article iframe {
     display: none;
 }
 
+.entry-summary-container {
+    height: 55% !important;
+}
+
+.entry-title-container {
+    height: 45% !important;
+}
+
+.entry-summary {
+    height: 100%;
+    overflow: hidden;
+}
+
+.entry-card {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.entry-card-parent {
+    height: 170px !important;
+}
+
 .article-text-container {
     overflow: hidden;
     height: 190px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px !important;
 }
+
 .article-row-container{
     height: 100%;
+}
+
+.source-favicon {
+    height: 30px;
+    width: 30px;
 }

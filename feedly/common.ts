@@ -1,6 +1,6 @@
 import queryString from "querystring";
 
-const feedlyUrl = "https://cloud.feedly.com/v3/"
+const corsProxyUrl = "https://cloud.feedly.com/v3/"
 
 export const feedlyQueryString = (params: Object): string => {
     const fixedCase = {};
@@ -19,7 +19,7 @@ export const makeFeedlyRequest = async <T>(url: string, params?: Object): Promis
             ? '&'
             : '?';
 
-    const requestUrl = `${feedlyUrl}${url}${joiner}${queryString}`;
+    const requestUrl = `${corsProxyUrl}${url}${joiner}${queryString}`;
 
     // TODO: Use a custom cors proxy, this should not be in production.
     const response = await fetch(requestUrl, {
@@ -34,7 +34,7 @@ export const makeFeedlyRequest = async <T>(url: string, params?: Object): Promis
 }
 
 export const makePostRequest = (endpoint: string, params: Object) => {
-    return fetch(`${feedlyUrl}${endpoint}`, {
+    return fetch(`${corsProxyUrl}${endpoint}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

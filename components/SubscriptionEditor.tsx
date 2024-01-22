@@ -77,7 +77,7 @@ const SubscriptionEditor = (props: Props) => {
                     className="w-full capitalize border-none focus:border bg-input"
                     onChange={preferredViewChanged}
                     items={mobilizers}
-                    value={props.subscription.preferredView || 'feedly'}
+                    value={props.subscription.preferredView || 'mozilla'}
                     renderValue={i => i} renderItem={i => i} />
             </div>}
         </div>

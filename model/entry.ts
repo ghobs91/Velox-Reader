@@ -49,6 +49,7 @@ export interface Entry {
     engagementRate?: number;
 
     transient?: boolean;
+    subscriptionUrl?: string;
 }
 
 export interface EntryThumbnail {

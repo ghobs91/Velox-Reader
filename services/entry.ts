@@ -63,13 +63,28 @@ export const getEntrySummary = (entry: Entry) => {
     return sanitizeContent(content, ['iframe']);
 }
 
-export const getEntryByline = (entry: Entry) => entry && `${entry.engagement ? entry.engagement + ' ' : ''}${entry.origin && entry.origin.title} / ${relativeDate(new Date(entry.published))}`;
+export const getEntryByline = (entry: Entry) => entry && `${entry.origin && entry.origin.title}`;
 
 export const getEntryVisualUrl = (entry: Entry) => {
     if (!entry)
         return;
 
     let url = entry.visual && entry.visual.url;
+    if (url === "none")
+        return null;
+
+    // Attempt to stop the mixed content warnings!
+    // If the site doesn't have an https version of the image, we just won't display one.
+    if (url)
+        url = url.replace("$http:", "https:");
+    return url;
+}
+
+export const getEntrySourceFaviconUrl = (entry: Entry) => {
+    if (!entry)
+        return;
+    const subscription = useSubscription(entry?.origin?.streamId ?? entry?.originId);
+    let url = subscription?.iconUrl;
     if (url === "none")
         return null;
 

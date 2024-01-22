@@ -1,6 +1,6 @@
 import React, { memo, useCallback, useEffect, useMemo, useState } from 'react';
 import { Entry } from "../model/entry";
-import { getEntryByline, getEntrySummary, getEntryVisualUrl } from "../services/entry";
+import { getEntryByline, getEntrySummary, getEntryVisualUrl, getEntrySourceFaviconUrl } from "../services/entry";
 
 const maxLines = {
     maxLines: 4
@@ -8,6 +8,7 @@ const maxLines = {
 
 const EntryCard = (props: { entry: Entry, showingUnreadOnly?: boolean }) => {
     const visualUrl = getEntryVisualUrl(props.entry);
+    const entrySourceFaviconUrl = getEntrySourceFaviconUrl(props.entry);
     const subheader = getEntryByline(props.entry);
     const summaryHtmlContent = useMemo(() => ({
         __html: getEntrySummary(props.entry)
@@ -18,6 +19,11 @@ const EntryCard = (props: { entry: Entry, showingUnreadOnly?: boolean }) => {
         setImageUrl(visualUrl);
     }, [visualUrl]);
 
+    const [entrySourceFaviconUrlFromState, setEntrySourceFaviconUrl] = useState(entrySourceFaviconUrl);
+    useEffect(() => {
+        setEntrySourceFaviconUrl(entrySourceFaviconUrl);
+    }, [entrySourceFaviconUrl]);
+
     // Unset the image url when there's an error.
     const onImageError = useCallback(() => {
         setImageUrl(null);
@@ -27,13 +33,14 @@ const EntryCard = (props: { entry: Entry, showingUnreadOnly?: boolean }) => {
     const tintGray = !props.entry.unread && props.showingUnreadOnly;
 
     return <div className="bg-paper cursor-pointer relative rounded-lg overflow-hidden shadow entry-card">
+            <img src={entrySourceFaviconUrlFromState} className="rounded-l-md object-cover source-favicon" />
             <div className="flex flex-row article-row-container">
-                <div className="flex-1 min-w-0 px-4 pt-2 article-text-container">
-                    <div>
+                <div className="flex-1 min-w-0 article-text-container">
+                    <div className="entry-title-container">
                         <h2 className="text-lg max-h-12 overflow-hidden leading-tight" style={maxLines}>{props.entry.title}</h2>
                         <h3 className="text-md text-gray-500 leading-tight">{subheader}</h3>
                     </div>
-                    <div className="mt-2 mb-2 text-sm">
+                    <div className="mt-2 mb-2 text-sm entry-summary-container">
                         <div className="entry-summary" dangerouslySetInnerHTML={summaryHtmlContent}></div>
                     </div>
                 </div>
