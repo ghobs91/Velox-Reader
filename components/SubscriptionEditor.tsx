@@ -47,7 +47,7 @@ const SubscriptionControls = (props: Props) => {
     return progress;
 }
 
-const mobilizers: Subscription["preferredView"][] = ["mozilla"];
+const mobilizers: Subscription["preferredView"][] = ["feedly", "mozilla", "browser"];
 const SubscriptionEditor = (props: Props) => {
     const router = useRouter();
     const viewStream = useCallback(() => {

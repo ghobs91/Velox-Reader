@@ -11,7 +11,7 @@ export interface Subscription {
     feedUrl?: string;
     visualUrl?: string;
     iconUrl?: string;
-    preferredView?: 'mozilla';
+    preferredView?: 'feedly' | 'browser' | 'mozilla';
 
     // Import is considered successful when there is no
     // import status.
