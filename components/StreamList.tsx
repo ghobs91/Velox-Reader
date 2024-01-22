@@ -36,9 +36,9 @@ const Row = collect((props: { index: number, style: any, store: Store }) => {
     const onClick = useCallback(() => {
         if (!item) return;
 
-        if (viewMode === "browser") {
-            window.open(getEntryUrl(item), "_blank");
-        } else {
+        // if (viewMode === "browser") {
+        //     window.open(getEntryUrl(item), "_blank");
+        // } else {
             const url = getProgrssiveUrl(item);
             // If we're currently looking at an entry,
             // replace it.
@@ -46,7 +46,7 @@ const Row = collect((props: { index: number, style: any, store: Store }) => {
                 ? router.replace
                 : router.push;
             action(url);
-        }
+        // }
 
         // If pages should be marked as read on open, do that.
         if (settings.markOpenedAsRead) {
