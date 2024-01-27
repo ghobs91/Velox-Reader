@@ -33,7 +33,9 @@ const EntryCard = (props: { entry: Entry, showingUnreadOnly?: boolean }) => {
     const tintGray = !props.entry.unread && props.showingUnreadOnly;
 
     return <div className="bg-paper cursor-pointer relative rounded-lg overflow-hidden shadow entry-card">
-            <img src={entrySourceFaviconUrlFromState} className="rounded-l-md object-cover source-favicon" />
+            <div className="source-favicon-container">
+                <img src={entrySourceFaviconUrlFromState} className="rounded-l-md object-cover source-favicon" />
+            </div>
             <div className="flex flex-row article-row-container">
                 <div className="flex-1 min-w-0 article-text-container">
                     <div className="entry-title-container">
