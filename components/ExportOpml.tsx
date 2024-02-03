@@ -15,7 +15,7 @@ export const getSubscriptionsOpml = async () => {
     }));
 
     const opmlGenerator = (await import("opml-generator")).default;
-    const opml = opmlGenerator({ title: 'Progrssive Feed Dump', dateCreated: new Date() }, outlines);
+    const opml = opmlGenerator({ title: 'Velox Reader Feed Dump', dateCreated: new Date() }, outlines);
     return opml;
 }
 

@@ -21,7 +21,7 @@ article iframe {
 }
 
 .entry-title-container {
-    height: 45% !important;
+    /* height: 45% !important; */
 }
 
 .entry-summary {
@@ -59,4 +59,15 @@ article iframe {
 .source-favicon-container {
     min-height: 30px;
     min-width: 30px;
+    margin-right: 10px;
+}
+
+.article-source-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 7px;
+    width: fit-content;
+    padding-right: 10px;
 }

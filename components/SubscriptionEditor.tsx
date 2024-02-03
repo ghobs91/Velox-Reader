@@ -70,6 +70,7 @@ const SubscriptionEditor = (props: Props) => {
         <div className="mx-2 flex-grow p-2">
             <div onClick={viewStream} className="cursor-pointer">
                 <b>{props.subscription.title}</b>
+                {props.subscription.folder && <p>Category: {props.subscription.folder}</p>}
             </div>
             {props.isSubscribed && !props.subscription.deleting && <div className="mt-2">
                 <label>Preferred View</label>

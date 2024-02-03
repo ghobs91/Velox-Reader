@@ -62,6 +62,7 @@ const ImportOpml = (props: Props & ButtonProps) => {
                 id: `${feedUrlPrefix}${o.xmlurl}`,
                 feedUrl: o.xmlurl,
                 title: o.title,
+                folder: o.folder,
                 categories: [{
                     id: o.folder,
                     label: o.folder
