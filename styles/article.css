@@ -49,6 +49,7 @@ article iframe {
 
 .article-row-container{
     height: 100%;
+    width: 100%;
 }
 
 .source-favicon {
@@ -66,7 +67,7 @@ article iframe {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border: 1px solid gray;
+    border: 1px solid #252525;
     border-radius: 7px;
     width: fit-content;
     padding-right: 10px;
