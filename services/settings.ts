@@ -9,9 +9,9 @@ export const defaultSettings: Settings = {
     markScrolledAsRead: true,
     doubleTapToCloseArticles: true,
     fontSize: 3,
-    theme: 'device',
-    accent: 'green',
-    secondaryAccent: 'pink',
+    theme: 'dark',
+    accent: 'blueGrey',
+    secondaryAccent: 'lightBlue',
     fontFamily: 'Roboto',
     cleanupSettings: {
         deleteReadEntries: 7,

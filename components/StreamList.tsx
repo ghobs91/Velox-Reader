@@ -89,7 +89,7 @@ const StreamList = (props: Props) => {
     }, [lastVisibleStartIndex, loadedEntries, markScrolledAsRead]);
 
     const listHeight = height - 48 - GUTTER_SIZE * 2;
-    const itemHeight = 200;
+    const itemHeight = 165;
     const totalScrollHeight = props.store.stream.length * itemHeight;
     const listRef = useRef<FixedSizeList>();
     const listOuterRef = useRef<HTMLDivElement>();
@@ -118,7 +118,7 @@ const StreamList = (props: Props) => {
         ref={listRef}
         outerRef={listOuterRef}
         onScroll={onScrolled}
-        className="ml-auto mr-auto"
+        className="list-container "
         height={listHeight}
         itemSize={itemHeight}
         initialScrollOffset={getScrollPos()}

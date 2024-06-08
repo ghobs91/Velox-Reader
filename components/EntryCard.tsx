@@ -37,18 +37,18 @@ const EntryCard = (props: { entry: Entry, showingUnreadOnly?: boolean }) => {
                 <div className="flex-1 min-w-0 article-text-container">
                     <div className="entry-title-container">
                         <div className="entry-title-text-container">
-                            <h2 className="text-lg max-h-12 overflow-hidden leading-tight" style={maxLines}>{props.entry.title}</h2>
+                            <div className="entry-title-text overflow-hidden leading-tight" style={maxLines}>{props.entry.title}</div>
                         </div>
                         <div className="article-source-container">
                             <div className="source-favicon-container">
                                 <img src={entrySourceFaviconUrlFromState} className="rounded-l-md object-cover source-favicon" />
                             </div>
-                            <h3 className="text-md text-gray-500 leading-tight">{subheader}</h3>
+                            <div className="text-md text-gray-500 leading-tight">{subheader}</div>
                         </div>
                     </div>
-                    <div className="mt-2 mb-2 text-sm entry-summary-container">
+                    {/* <div className="mt-2 mb-2 text-sm entry-summary-container">
                         <div className="entry-summary" dangerouslySetInnerHTML={summaryHtmlContent}></div>
-                    </div>
+                    </div> */}
                 </div>
                 {imageUrl && <img
                     onError={onImageError}

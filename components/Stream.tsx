@@ -108,9 +108,7 @@ function Stream(props: { store: Store }) {
                             <Add />
                         </IconButton>}
                 </AppBarButton>
-                : <AppBarButton>
-                    <Toggle checked={!showRead} onChange={toggleShowRead} label="Unread" />
-                </AppBarButton>}
+                : null}
             <AppBarButton>
                 <IconButton disabled={loading} onClick={() => updateStreams(streamId)}>
                     <Refresh />
