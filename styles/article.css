@@ -31,6 +31,8 @@ article iframe {
 }
 
 .entry-card {
+    height: 150px !important;
+    max-height: 150px !important;
     display: flex;
     align-items: center;
 }
