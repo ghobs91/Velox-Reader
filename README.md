@@ -1,8 +1,8 @@
-Progrssive is a Progressive Web App for reading RSS feeds (hence the name: ProgRSSive). It's built in such a way that it works entirely offline.
+Velox is a Progressive Web App for reading RSS feeds. It's built in such a way that it works entirely offline.
 
 A live version is available at https://readr.nz/
 
-![Progrssive installed as a PWA on desktop](https://github.com/fallaciousreasoning/progrssive/raw/master/images/desktop-installed-stream.png)
+![Velox installed as a PWA on desktop](https://github.com/fallaciousreasoning/progrssive/raw/master/images/desktop-installed-stream.png)
 
 ## Installing
 Currently not all browsers support installing PWAs. I've collected some of the ones that do here:
@@ -16,7 +16,7 @@ Currently not all browsers support installing PWAs. I've collected some of the o
 
 1. Clone the repository
    
-       git clone https://github.com/fallaciousreasoning/progrssive.git
+       git clone https://github.com/ghobs91/Velox-Reader.git
 
 2. Install packages
 
@@ -25,7 +25,7 @@ Currently not all browsers support installing PWAs. I've collected some of the o
 3. Start the development server.
 
         npm run start
-    by default, Progrssive will be available on http://localhost:8080
+    by default, Velox Reader will be available on http://localhost:8080
 
 ### `npm run dev`
 

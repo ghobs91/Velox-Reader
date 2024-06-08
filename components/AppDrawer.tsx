@@ -39,7 +39,7 @@ export default function AppDrawer(props: { trigger: JSX.Element }) {
         <Drawer isOpen={open} onClose={close}>
             <div className="m-2 w-64">
                 <h5 className="text-xl ml-2">
-                    Progrssive Reader
+                    Velox Reader
                 </h5>
                 <ul className="py-2">
                     <ListItemButton icon={<Subscriptions {...iconProps} />} text="Feeds" href="/stream/all" onClick={close} />

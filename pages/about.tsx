@@ -7,7 +7,7 @@ export default function AboutPage() {
             Velox Reader is an offline web app for reading RSS feeds.
         </p>
         <p>
-            The source code is available on <a target="_blank" rel="noopener noreferrer" href="https://github.com/ghobs91/progrssive">Github</a>.
+            The source code is available on <a target="_blank" rel="noopener noreferrer" href="https://github.com/ghobs91/Velox-Reader">Github</a>.
         </p>
     </div>
 }

@@ -1,7 +1,7 @@
 {
-  "short_name": "Progrssive",
-  "name": "Progrssive Reader",
-  "description": "An offline PWA for reading and subscribing to RSS feeds.",
+  "short_name": "Velox Reader",
+  "name": "Velox Reader",
+  "description": "A Progressive Web App for reading and subscribing to RSS feeds, even offline.",
   "categories": ["news", "PWA", "RSS", "feeds", "feedly", "offline"],
   "icons": [{
       "src": "icon-green.png",
