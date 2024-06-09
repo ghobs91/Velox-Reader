@@ -16,6 +16,7 @@ import { getDb } from "services/db";
 import {toggleSubscription, addSubscription } from "services/subscriptions";
 import { useDebounced } from '@/hooks/useDebounced';
 import { saveSubscription } from '../services/db';
+import Add from '../icons/add.svg';
 
 const searchResultVariants = {
     initial: { opacity: 0, height: 0 },
@@ -174,7 +175,8 @@ export default function SubscriptionPage() {
         </StackPanel>
 
         <div className="sticky top-2 z-10" >
-            <TextField label="Search term or feed url" className="w-full" value={search} onChange={e => setSearch(e.target.value)}/>
+            <Add />
+            <TextField label="Enter new RSS feed url" className="w-full" value={search} onChange={e => setSearch(e.target.value)}/>
         </div>
 
         {/* <div>

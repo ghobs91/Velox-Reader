@@ -46,9 +46,9 @@ const EntryCard = (props: { entry: Entry, showingUnreadOnly?: boolean }) => {
                             <div className="text-md text-gray-500 leading-tight">{subheader}</div>
                         </div>
                     </div>
-                    {/* <div className="mt-2 mb-2 text-sm entry-summary-container">
+                    <div className="mt-2 mb-2 text-sm entry-summary-container">
                         <div className="entry-summary" dangerouslySetInnerHTML={summaryHtmlContent}></div>
-                    </div> */}
+                    </div>
                 </div>
                 {imageUrl && <img
                     onError={onImageError}

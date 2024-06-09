@@ -7,6 +7,8 @@ export default function StreamPage() {
   return <Suspense fallback={<div className="w-full flex justify-center">
     <LoadingSpinner />
   </div>}>
+  <div className="stream-parent">
     <Stream />
+  </div>
   </Suspense>
 };

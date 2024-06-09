@@ -20,3 +20,13 @@
 .list-container > div {
     display: flex;
 }
+
+.list-container {
+    max-width: 650px;
+}
+
+.stream-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
