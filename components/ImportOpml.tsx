@@ -81,7 +81,7 @@ const ImportOpml = (props: Props & ButtonProps) => {
         color="primary"
         {...buttonProps}
         onClick={pick}>
-        Import Opml
+        Import RSS feeds from OPML or XML
     </Button>
 };
 

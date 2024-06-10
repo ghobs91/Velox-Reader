@@ -42,7 +42,7 @@ export default function AppDrawer(props: { trigger: JSX.Element }) {
                     Velox Reader
                 </h5>
                 <ul className="py-2">
-                    <ListItemButton icon={<Subscriptions {...iconProps} />} text="Feeds" href="/stream/all" onClick={close} />
+                    <ListItemButton icon={<Subscriptions {...iconProps} />} text="Home" href="/stream/all" onClick={close} />
                     <ListItemButton icon={<Articles {...iconProps} />} text="Edit Subscriptions" href="/subscriptions" onClick={close} />
                     <ListItemButton icon={<Settings {...iconProps} />} text="Settings" href="/settings" onClick={close} />
                     <ListItemButton icon={<About {...iconProps} />} text="About" href="/about" onClick={close} />

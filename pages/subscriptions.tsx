@@ -49,7 +49,7 @@ export default function SubscriptionPage() {
     }, [importingSubscriptions]);
 
     const { search: rawQueryString, setSearch: updateQueryString } = useQueryParam("search");
-    const [search, setSearch] = useState(rawQueryString ?? '@subscribed');
+    const [search, setSearch] = useState(rawQueryString ?? '');
 
     const debouncedSearchTerm = useDebounced(search, 200);
     const [searchResults, setSearchResults] = useState<Subscription[]>([]);
@@ -175,7 +175,6 @@ export default function SubscriptionPage() {
         </StackPanel>
 
         <div className="sticky top-2 z-10" >
-            <Add />
             <TextField label="Enter new RSS feed url" className="w-full" value={search} onChange={e => setSearch(e.target.value)}/>
         </div>
 

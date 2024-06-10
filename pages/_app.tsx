@@ -45,7 +45,7 @@ const ProgrssiveApp = ({ Component, pageProps }: AppProps) => {
         name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       <meta name="theme-color" content={getColorForTheme(settings.accent, themeMode)} />
-      <link rel="shortcut icon" href="images/512.png" />
+      <link rel="shortcut icon" href="512.png" />
       <link rel="manifest" href="/manifest.json" />
       <title>Velox Reader</title>
     </Head>
