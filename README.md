@@ -1,8 +1,8 @@
 Velox is a Progressive Web App for reading RSS feeds. It's built in such a way that it works entirely offline.
 
-A live version is available at https://readr.nz/
+A live version is available at https://veloxreader.app
 
-![Velox installed as a PWA on desktop](https://github.com/fallaciousreasoning/progrssive/raw/master/images/desktop-installed-stream.png)
+![Velox installed as a PWA]([https://github.com/fallaciousreasoning/progrssive/raw/master/images/desktop-installed-stream.png](https://i.imgur.com/xiZabYc.png))
 
 ## Installing
 Currently not all browsers support installing PWAs. I've collected some of the ones that do here:
