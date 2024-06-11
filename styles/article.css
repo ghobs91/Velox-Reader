@@ -44,6 +44,11 @@ article iframe {
     align-items: center;
 }
 
+#article-card {
+    border-color: #18181c !important;
+    background-color: rgb(35, 36, 37) !important;
+}
+
 .entry-card-parent {
     height: 170px !important;
     flex: 0 0 33.33% !important;
@@ -92,4 +97,9 @@ article iframe {
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
+}
+
+.app-bar {
+    background-color: #18191a !important;
+    backdrop-filter: saturate(180%) blur(20px);
 }
