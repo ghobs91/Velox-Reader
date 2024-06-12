@@ -3,7 +3,7 @@ import { useSettings } from "@/services/settings";
 import { getColorForTheme, getContrastingColor, isDark } from "@/styles/colors";
 
 export interface ButtonProps extends React.HtmlHTMLAttributes<HTMLButtonElement> {
-    color?: 'primary' | 'secondary';
+    color?: 'white';
     variant?: 'solid' | 'outline';
     compact?: boolean;
     disabled?: boolean;

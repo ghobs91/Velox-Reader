@@ -78,7 +78,8 @@ const ImportOpml = (props: Props & ButtonProps) => {
 
     return <Button
         variant="outline"
-        color="primary"
+        color="white"
+        className="subscriptions-button"
         {...buttonProps}
         onClick={pick}>
         Import RSS feeds from OPML or XML

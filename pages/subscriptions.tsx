@@ -165,7 +165,7 @@ export default function SubscriptionPage() {
 
         <StackPanel direction='row'>
             {!search.startsWith('@subscribed')
-                && <Button key="current" variant="outline" color="primary" onClick={viewSubscriptions}>
+                && <Button key="current" variant="outline" color="white" onClick={viewSubscriptions}>
                     Current Feeds
                 </Button>}
             {!!subscriptions.length

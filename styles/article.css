@@ -98,3 +98,7 @@ article iframe {
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
 }
+
+.subscriptions-button {
+    color: white !important;
+}
