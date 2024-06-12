@@ -99,7 +99,7 @@ article iframe {
     -webkit-line-clamp: 2;
 }
 
-.app-bar {
+/* .app-bar {
     background-color: #18191a !important;
     backdrop-filter: saturate(180%) blur(20px);
-}
+} */

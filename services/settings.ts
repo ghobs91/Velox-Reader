@@ -10,7 +10,7 @@ export const defaultSettings: Settings = {
     doubleTapToCloseArticles: true,
     fontSize: 3,
     theme: 'dark',
-    accent: 'blueGrey',
+    accent: 'black',
     secondaryAccent: 'lightBlue',
     fontFamily: 'Roboto',
     cleanupSettings: {

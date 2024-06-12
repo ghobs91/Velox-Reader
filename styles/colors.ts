@@ -3,6 +3,10 @@ export const colors = {
         light: '#ffc107',
         dark: '#ffa000',
     },
+    black: {
+        light: 'rgba(24,25,26,.6)',
+        dark: 'rgba(24,25,26,.6)'
+    },
     blue: {
         light: '#2196f3',
         dark: '#1976d2',
