@@ -45,8 +45,8 @@ article iframe {
 }
 
 #article-card {
-    border-color: #18181c !important;
-    background-color: rgb(35, 36, 37) !important;
+    border: 1px solid #212121 !important;
+    background-color: rgb(26, 26, 26) !important;
 }
 
 .entry-card-parent {
@@ -98,8 +98,3 @@ article iframe {
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
 }
-
-/* .app-bar {
-    background-color: #18191a !important;
-    backdrop-filter: saturate(180%) blur(20px);
-} */

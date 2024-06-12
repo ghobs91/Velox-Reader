@@ -10,7 +10,7 @@ module.exports = {
       },
       colors: {
         primary: {
-          DEFAULT: '#0a0a0d',
+          DEFAULT: 'var(--primary-color)',
         },
         paper: {
           DEFAULT: 'var(--paper-color)'
