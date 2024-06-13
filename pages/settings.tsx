@@ -162,7 +162,7 @@ const SettingsPage = () => {
                 <CleanupPicker name="deleteReadEntries" />
             </ListItem>
             <ListItem primary="Storage" secondary={storageUsage}>
-                <LinkButton color="primary" href="/clean">
+                <LinkButton color="white" href="/clean">
                     <span className="text-lg">Clean</span>
                 </LinkButton>
             </ListItem>

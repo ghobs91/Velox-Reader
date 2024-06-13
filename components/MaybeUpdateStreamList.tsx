@@ -20,7 +20,7 @@ const UpdateButton = (props: ToastProps) => {
         props.dismiss();
     }, [props.dismiss]);
 
-    return <Button compact color="secondary" onClick={callback}>
+    return <Button compact color="white" onClick={callback}>
         Show
     </Button>
 }

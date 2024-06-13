@@ -179,7 +179,7 @@ export default function SubscriptionPage() {
         </div>
 
         {/* <div>
-            <Button key="follow-all" variant="outline" color="primary" onClick={bulkAddSubscriptions}>Follow All</Button>
+            <Button key="follow-all" variant="outline" color="white" onClick={bulkAddSubscriptions}>Follow All</Button>
         </div> */}
 
         {isSearching && <Centre>

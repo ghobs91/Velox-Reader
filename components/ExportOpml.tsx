@@ -26,7 +26,7 @@ const ExportOpml = (props: ButtonProps) => {
             `progrssive-feeds-${new Date().toISOString()}.opml`,
             'text/xml');
     }, []);
-    return <Button variant="outline" color="primary" {...props} onClick={download}>
+    return <Button variant="outline" color="white" {...props} onClick={download}>
         Export Feeds
     </Button>
 };

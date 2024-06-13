@@ -51,13 +51,13 @@ export default function StreamFooter(props: Props) {
                 : "You don't have any subscriptions"}
         </h3>
         <StackPanel direction={isPhone ? 'col' : 'row'} key="buttons">
-            {props.unreadOnly && hasSubscriptions && <Button className="w-full" color="secondary" key="showUnread" onClick={() => setShowRead(true)}>
+            {props.unreadOnly && hasSubscriptions && <Button className="w-full" color="white" key="showUnread" onClick={() => setShowRead(true)}>
                 Show Read
             </Button>}
-            <LinkButton className="w-full" href="/subscriptions?query=" color="secondary" key="addSubscriptions">
+            <LinkButton className="w-full" href="/subscriptions?query=" color="white" key="addSubscriptions">
                 Add Subscriptions
             </LinkButton>
-            {hasSubscriptions && <Button className="w-full flex flex-row" disabled={loading} color="secondary" key="refresh" onClick={() => updateStreams(props.streamId)}>
+            {hasSubscriptions && <Button className="w-full flex flex-row" disabled={loading} color="white" key="refresh" onClick={() => updateStreams(props.streamId)}>
                 {loading && <LoadingSpinner size={4} className="-mr-1" />} Refresh
             </Button>}
         </StackPanel>
