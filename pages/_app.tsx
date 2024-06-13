@@ -17,6 +17,7 @@ import 'styles/streamviewer.css';
 import 'styles/toggle.css';
 import 'types/Window';
 import { cleanupWorker } from 'background';
+import { Analytics } from "@vercel/analytics/react"
 
 // Make sure our store is initialized.
 initStore();
@@ -55,6 +56,7 @@ const ProgrssiveApp = ({ Component, pageProps }: AppProps) => {
       <div className="mx-auto p-2 max-w-3xl">
         <Animator duration={100}>
           <Component key={globalThis.location?.pathname} {...pageProps} />
+          <Analytics />
         </Animator>
       </div>
     </AppBar>
