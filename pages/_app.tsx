@@ -48,7 +48,10 @@ const ProgrssiveApp = ({ Component, pageProps }: AppProps) => {
       <meta name="theme-color" content={getColorForTheme(settings.accent, themeMode)} />
       <link rel="shortcut icon" href="512.png" />
       <link rel="manifest" href="/manifest.json" />
-      <link rel="icon" type="image/x-icon" href="favicon.ico"  />
+      <link rel="shortcut icon" href="/android-chrome-maskable-192x192.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"/>
+      <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"/>
       <title>Velox Reader</title>
     </Head>
     <Toasts />
