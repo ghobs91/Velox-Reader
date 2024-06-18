@@ -43,7 +43,8 @@ export default function AppDrawer(props: { trigger: JSX.Element }) {
                 </h5>
                 <ul className="py-2">
                     <ListItemButton icon={<Subscriptions {...iconProps} />} text="Home" href="/stream/all" onClick={close} />
-                    <ListItemButton icon={<Articles {...iconProps} />} text="Edit Subscriptions" href="/subscriptions" onClick={close} />
+                    <ListItemButton icon={<Articles {...iconProps} />} text="My Subscriptions" href="/subscriptions" onClick={close} />
+                    {/* <ListItemButton icon={<Articles {...iconProps} />} text="Add New Feed" href="/subscriptions" onClick={close} /> */}
                     <ListItemButton icon={<Settings {...iconProps} />} text="Settings" href="/settings" onClick={close} />
                     <ListItemButton icon={<About {...iconProps} />} text="About" href="/about" onClick={close} />
                     {installPrompt && <ListItemButton onClick={installPrompt} icon={<Install {...iconProps}/>} text="Install" />}

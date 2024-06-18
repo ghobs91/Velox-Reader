@@ -8,6 +8,7 @@ export default function StreamPage() {
     <LoadingSpinner />
   </div>}>
   <div className="stream-parent">
+    <div className="stream-top-spacer"></div>
     <Stream />
   </div>
   </Suspense>

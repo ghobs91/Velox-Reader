@@ -49,7 +49,7 @@ export default function SubscriptionPage() {
     }, [importingSubscriptions]);
 
     const { search: rawQueryString, setSearch: updateQueryString } = useQueryParam("search");
-    const [search, setSearch] = useState(rawQueryString ?? '');
+    const [search, setSearch] = useState('@subscribed');
 
     const debouncedSearchTerm = useDebounced(search, 200);
     const [searchResults, setSearchResults] = useState<Subscription[]>([]);
@@ -175,8 +175,11 @@ export default function SubscriptionPage() {
         </StackPanel>
 
         <div className="sticky top-2 z-10" >
-            <TextField label="Enter new RSS feed url" className="w-full" value={search} onChange={e => setSearch(e.target.value)}/>
+            <TextField label="Enter new RSS feed url or search by topic" className="w-full" value={search} onChange={e => setSearch(e.target.value)}/>
         </div>
+        {/* <div>
+            <span>Discover</span>
+        </div> */}
 
         {/* <div>
             <Button key="follow-all" variant="outline" color="white" onClick={bulkAddSubscriptions}>Follow All</Button>
@@ -194,10 +197,8 @@ export default function SubscriptionPage() {
                 toggleSubscription={toggleSubscription}/>)}
         </StackPanel>
         {!isSearching && storeOrSearchResults.length === 0 && <StackPanel>
-            <span>
-                There's nothing here.
-            </span>
-        </StackPanel>}
+        </StackPanel>
+        }
     </div>
 };
 

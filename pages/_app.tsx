@@ -56,7 +56,7 @@ const ProgrssiveApp = ({ Component, pageProps }: AppProps) => {
     </Head>
     <Toasts />
     <AppBar>
-      <div className="mx-auto p-2 max-w-3xl">
+      <div className="mx-auto max-w-3xl">
         <Animator duration={100}>
           <Component key={globalThis.location?.pathname} {...pageProps} />
           <Analytics />

@@ -72,3 +72,11 @@ a {
 svg {
     fill: var(--foreground-color);
 }
+
+.text-primary {
+    color: white;
+}
+
+.text-base {
+    color: #747474;
+}
