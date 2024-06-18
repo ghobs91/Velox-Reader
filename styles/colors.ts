@@ -5,7 +5,7 @@ export const colors = {
     },
     black: {
         light: 'rgba(24,25,26,.6)',
-        dark: 'rgba(24,25,26,.6)'
+        dark: '#111111'
     },
     blue: {
         light: '#2196f3',
