@@ -68,7 +68,8 @@ const EntryViewer = (props: { store: Store }) => {
             loadMobilizedContent(entryId)
                 .catch(() => {
                     setFailedToMobilize(true);
-                    window.showToast("Failed to mobilize article! Are you offline?");
+                    setCurrentView("feedly")
+                    // window.showToast("Failed to mobilize article! Are you offline?");
                 });
         }
     }, [currentView, entryId, !!entry]);
@@ -147,7 +148,7 @@ const EntryViewer = (props: { store: Store }) => {
                 <div className="text-sm">
                     {failedToMobilize
                         ? "Failed to mobilize article."
-                        : "Mobilizing..."}
+                        : "Loading reader view..."}
                 </div>
                 {failedToMobilize
                     ? <StackPanel direction="row">
