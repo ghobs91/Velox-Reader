@@ -65,7 +65,9 @@ export default function ProgrssiveAppBar(props: { children: React.ReactNode }) {
     return <AppBarContext.Provider value={context}>
         <div className="flex flex-row items-center text-foreground w-full h-12 shadow-sm lg:px-6 z-10 relative title-bar">
             <AppDrawer trigger={<IconButton><Menu /></IconButton>} />
-            <div className="text-lg font-normal">Velox Reader</div>
+            <a className='no-style' href='/stream/all'>
+                <div className="text-lg font-normal">Velox Reader</div>
+            </a>
             <StackPanel className="flex-1" direction="row" alignItems="center" justifyContent="end" spacing="space-x-2">
                 {Object.values(context.children).sort((a, b) => b.sort - a.sort).map(child => <React.Fragment key={child.id}>
                     {child.child}

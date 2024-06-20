@@ -142,7 +142,7 @@ const EntryViewer = (props: { store: Store }) => {
             <span className="text-base text-gray-500">{getEntryByline(entry)}</span>
         </div>
         {content !== undefined
-            ? <div className="text-sm" dangerouslySetInnerHTML={{ __html: content }}></div>
+            ? <div className="text-sm readability-content" dangerouslySetInnerHTML={{ __html: content }}></div>
             : <StackPanel alignItems='center'>
                 <div className="text-sm">
                     {failedToMobilize

@@ -101,7 +101,7 @@ export const useViewMode = (entry: Entry) => {
     useEffect(() => {
         setView(subscription?.preferredView);
     },[subscription?.preferredView]);
-    return [view ?? 'feedly', setView] as const;
+    return [view ?? 'mozilla', setView] as const;
 }
 
 export const getProgrssiveUrl = (to: Entry) => {

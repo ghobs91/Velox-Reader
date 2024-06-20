@@ -102,3 +102,15 @@ article iframe {
 .subscriptions-button {
     color: white !important;
 }
+
+.readability-content p {
+    margin-bottom: 15px;
+}
+
+.reader-view-toggle {
+    width: 100px;
+}
+
+.no-style {
+    text-decoration: none;
+}

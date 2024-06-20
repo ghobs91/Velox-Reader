@@ -16,7 +16,7 @@ const PreferredViewMenu = (props: Props) => {
         onChange(value);
     }, [onChange]);
 
-    return <div>
+    return <div className="reader-view-toggle">
         <ToggleMenu trigger={
         <IconButton>
             <ViewMode />
@@ -28,7 +28,7 @@ const PreferredViewMenu = (props: Props) => {
             <MenuItem
                 selected={props.value === "mozilla"}
                 value="mozilla"
-                onClick={menuItemClicked}>Mozilla</MenuItem>
+                onClick={menuItemClicked}>Mozilla Readability</MenuItem>
             <MenuItem
                 selected={props.value === "browser"}
                 value="browser"
