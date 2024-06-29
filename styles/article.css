@@ -114,3 +114,7 @@ article iframe {
 .no-style {
     text-decoration: none;
 }
+
+.reader-view {
+    padding: 0 15px 0 15px;
+}

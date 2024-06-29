@@ -165,7 +165,7 @@ const EntryViewer = (props: { store: Store }) => {
             </StackPanel>}
     </div>;
 
-    return <article className="mx-auto max-w-3xl text-foreground" ref={domElement} onClick={doubleTap}>
+    return <article className="reader-view mx-auto max-w-3xl text-foreground" ref={domElement} onClick={doubleTap}>
         {article}
         {active && <>
             {!entry.transient && <AppBarButton>
